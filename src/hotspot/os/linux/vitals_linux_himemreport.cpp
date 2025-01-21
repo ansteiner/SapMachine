@@ -380,7 +380,7 @@ static void print_high_memory_report_header(outputStream* st, const char* messag
   st->print_cr("############");
   st->print_cr("#");
   st->print_cr("# High Memory Report:");
-  st->print_cr("# pid: %d thread id: " INTX_FORMAT, pid, os::current_thread_id());
+  st->print_cr("# pid: %d thread id: %zd", pid, os::current_thread_id());
   st->print_cr("# %s", message);
   st->print_raw("# "); print_date_and_time(st, t); st->cr();
   st->print_cr("# Spike number: %d", g_alert_state->current_spike_no());

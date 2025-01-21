@@ -1329,7 +1329,7 @@ bool initialize() {
 
   if (success) {
     log_info(vitals)("Vitals initialized.");
-    log_debug(vitals)("Vitals sample interval: " UINTX_FORMAT " seconds.", VitalsSampleInterval);
+    log_debug(vitals)("Vitals sample interval: %zu seconds.", VitalsSampleInterval);
   } else {
     log_warning(vitals)("Failed to initialize Vitals.");
   }

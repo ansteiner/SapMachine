@@ -2344,7 +2344,7 @@ static void dump_from_flags(bool on_error) {
         size_t len = strlen(file);
         size_t first = pid_tag - file;
         char buf[32768];
-        jio_snprintf(buf, sizeof(buf), "%.*s" UINTX_FORMAT "%s",
+        jio_snprintf(buf, sizeof(buf), "%.*s%zu%s",
                     first, file, os::current_process_id(), pid_tag + 4);
         fileStream fs(buf, "a");
         mallocStatImpl::MallocStatisticImpl::dump(&fs, &fs, spec);
